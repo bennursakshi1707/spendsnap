@@ -1,0 +1,21 @@
+# The agent framework - what you actually use
+deepagents
+
+# These power deepagents under the hood - install but never touch directly
+langchain
+langgraph
+
+# MCP server - exposes our tools to the agent
+fastmcp
+
+# OpenAI - GPT-4o vision for receipt extraction
+openai
+
+# Excel - read and write .xlsx files
+openpyxl
+
+# Image processing - Phase 2, adding now so it's ready
+Pillow
+
+# Load API keys from .env file
+python-dotenv
