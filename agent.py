@@ -12,11 +12,16 @@ async def main():
     # This describes HOW to start it, same as before
     mcp_client = MultiServerMCPClient({
         "spendsnap": {
-            "command": "python",
-            "args": ["-m", "mcp_server.server"],
-            "transport": "stdio"
+            "url": "http://127.0.0.1:8000/mcp",
+            "transport": "http"
+        },
+
+        "currency": {
+            "url": "http://127.0.0.1:8001/mcp",
+            "transport": "http"
         }
     })
+
 
     # Step 2: Actually fetch the tools from that server
     # This starts the server as a subprocess and asks it
@@ -37,7 +42,8 @@ async def main():
 receipt images and adds them to the user's budget tracker. 
 You have access to a receipt-processing skill that tells you exactly 
 how to handle receipt uploads. Always follow that skill's instructions 
-precisely, in order.""",
+precisely, in order. You also have access to a convert_currency tool 
+if the user asks you to convert an amount between currencies.""",
     )
 
     # Step 4: Run the agent with our task

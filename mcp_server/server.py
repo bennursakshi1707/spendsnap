@@ -58,4 +58,4 @@ def write_excel(validated_data: dict) -> dict:
 
 # This runs the server when you execute this file directly
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run(transport="http", host="127.0.0.1", port=8000)
