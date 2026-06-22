@@ -123,7 +123,7 @@ if uploaded_file is not None:
 
 
     import os
-    os.mkdirs("receipts", exist_ok=True)
+    os.makedirs("receipts", exist_ok=True)
     save_path = f"receipts/{uploaded_file.name}"
     with open(save_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
