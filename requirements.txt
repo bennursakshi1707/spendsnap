@@ -19,3 +19,4 @@ Pillow
 
 # Load API keys from .env file
 python-dotenv
+streamlit

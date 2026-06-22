@@ -42,8 +42,7 @@ async def main():
 receipt images and adds them to the user's budget tracker. 
 You have access to a receipt-processing skill that tells you exactly 
 how to handle receipt uploads. Always follow that skill's instructions 
-precisely, in order. You also have access to a convert_currency tool 
-if the user asks you to convert an amount between currencies.""",
+precisely, in order, including any currency conversion steps it describes.""",
     )
 
     # Step 4: Run the agent with our task

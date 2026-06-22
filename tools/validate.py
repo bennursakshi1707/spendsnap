@@ -84,7 +84,7 @@ def validate_and_flag(extracted_data: dict) -> dict:
 
     # Step 5: Decide overall validity
     # Valid means: not a duplicate AND no missing critical fields
-    critical_issues = ["missing_merchant_name", "missing_date", "missing_total_amount", "duplicate_receipt"]
+    critical_issues = ["missing_merchant_name", "missing_total_amount", "duplicate_receipt"]
     is_valid = not any(flag in critical_issues for flag in flags)
 
     # Step 6: Attach results to the data

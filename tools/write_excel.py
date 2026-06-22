@@ -73,9 +73,13 @@ def write_to_excel(validated_data: dict) -> dict:
     flags_list = validated_data.get("flags", [])
     flags_text = ", ".join(flags_list) if flags_list else ""
 
+    date_value = validated_data.get("date") or "UNKNOWN_DATE"
+
+
+
     row = [
         receipt_id,
-        validated_data.get("date"),
+        date_value,
         validated_data.get("merchant_name"),
         validated_data.get("category"),
         validated_data.get("total_amount"),
