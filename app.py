@@ -121,6 +121,9 @@ if uploaded_file is not None:
     with col1:
         st.image(uploaded_file, caption=uploaded_file.name, use_container_width=True)
 
+
+    import os
+    os.mkdirs("receipts", exist_ok=True)
     save_path = f"receipts/{uploaded_file.name}"
     with open(save_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
